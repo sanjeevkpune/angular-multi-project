@@ -1,0 +1,17 @@
+{
+  "hosting": {
+	"site": "heroes-tour-sample",
+    "public": "dist/heroes-app",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
