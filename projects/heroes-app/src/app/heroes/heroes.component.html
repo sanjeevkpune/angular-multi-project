@@ -1,0 +1,25 @@
+<h2>My Heroes</h2>
+<!-- This is to show hero list and select a hero to show its detail in bottom
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero===selectedHero">
+        <span class="badge">{{hero.id}}</span> {{ hero.name}}
+    </li>
+</ul>
+-->
+
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" >
+        <a routerLink="/hero-detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span> {{ hero.name}}
+        </a>
+        
+    </li>
+</ul>
+<!-- Show the selected Hero detail; only if there is one selected-->
+<!-- This is to show hero list and select a hero to show its detail in bottom
+<div *ngIf="selectedHero">
+    <app-hero-detail [selectedHero]='selectedHero'></app-hero-detail>
+    
+</div>
+-->
+
